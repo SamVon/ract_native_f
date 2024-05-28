@@ -1,8 +1,6 @@
-import {View, Text, SafeAreaView, } from 'react-native';
-import React, {useEffect} from 'react';
+import {View, Text, SafeAreaView, FlatList} from 'react-native';
+import React, {useEffect, useState} from 'react';
 import CompanyApiModule from '../viewapimodule/CompanyApiModule';
-
-
 
 const DetailProduct = ({route}) => {
   const {
@@ -16,22 +14,30 @@ const DetailProduct = ({route}) => {
 
   useEffect(() => {
     handleGetRecommendCompany({
-      limit: 10,
+      limit: 1,
       page: 0,
       dvlat: 17.973470130290842,
       dvlon: 102.62789830466521,
     });
   }, []);
-
-  // useEffect(() => {
-  //   console.log('----->',reComData[0]?.products);
-  // }, [reComData]);
-
-
+  const data = route.params.productsId
   return (
-    <SafeAreaView style={{flex: 1 }}>
+    <SafeAreaView style={{flex: 1}}>
       <View style={{flex: 1}}>
-        <Text>DetailProduct</Text>
+        {reComLoadIng ? (
+          <Text>Loading</Text>
+        ) : (
+          <View style={{flex: 1}}>
+            <FlatList
+              data={data?.products?.pid}
+              keyExtractor={(item, index) => `${index}_reCom`}
+              renderItem={({item, index}) => (
+                <View style={{flex: 1}}>
+                  <Text>{{item}}</Text>
+                </View>
+              )}></FlatList>
+          </View>
+        )}
       </View>
     </SafeAreaView>
   );
