@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/NotoSansLao-Bold.ttf",
+      "sha1": "0b3c36bd644c005ea4eabdaf5623301de140b79b"
+    },
+    {
+      "path": "assets/fonts/NotoSansLao-Medium.ttf",
+      "sha1": "b32ece4d7a3ac3a838ed366b9ae0ab17efeb0d6e"
+    },
+    {
+      "path": "assets/fonts/NotoSansLao-Regular.ttf",
+      "sha1": "f0f4d3afa7f43923ff7ff3a90b62fd492a8ac675"
+    },
+    {
+      "path": "assets/fonts/NotoSansLao-SemiBold.ttf",
+      "sha1": "8932acaa9e4a81c5f6a41bd9ab3c933ae6f2ab9c"
+    }
+  ]
+}

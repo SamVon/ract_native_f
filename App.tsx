@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native'
-import AppNavigation from './src/navigation/AppNavigation'
 import React from 'react'
+import AppNavigation from './src/views/navigation/AppNavigation'
+
 
 const App = () => {
   return (
